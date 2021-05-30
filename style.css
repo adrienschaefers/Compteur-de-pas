@@ -21,7 +21,7 @@ body{
     color: var(--primary-blue);
     display: grid;
     grid-template-columns: 320px 1fr;
-    min-height: 100vh;
+    min-height: 200vh;
 }
 nav {
     background-color: var(--background-side);
@@ -58,3 +58,5 @@ circle {
     stroke: var(--primary-orange);
     stroke-width:6;
 }
+
+
