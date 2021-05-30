@@ -15,7 +15,7 @@
 // headerTag.style.fontSize = ("64px")
 
 //let's puck ALL of the H1 of the page
-const headerTags = document.querySelectorAll("h1")
+// const headerTags = document.querySelectorAll("h1")
 
 //then for each tag let it ahve a BG color
 // headerTags.forEach(h1 => {
@@ -24,9 +24,9 @@ const headerTags = document.querySelectorAll("h1")
 // })
 
 //Pick each tag and label it with each tag number, the index !!!
-headerTags.forEach((h1, index)=> { 
-    h1.innerHTML = "this is tag number" + index
-})
+// headerTags.forEach((h1, index)=> { 
+//     h1.innerHTML = "this is tag number" + index
+// })
 
 
 //Let's select all the rectangle tags
@@ -34,8 +34,8 @@ headerTags.forEach((h1, index)=> {
 
 // const rectTags = document.querySelectorAll("rect")
 
-// //Adding data in array
-const data = [120, 420, 731]
+
+
 
 // rectTags.forEach((tag, i) => {
 //     // tag.style.fill = ("red")
@@ -43,15 +43,29 @@ const data = [120, 420, 731]
 //     tag.setAttribute("width",  width + "px")
 // })
 
+const numberTags = document.querySelectorAll("h3")
+
+numberTags.forEach((h3, index) => {
+    h3.innerHTML = index
+})
+
+const data = [112, 80, 97, 60, 110, 99, 
+    66, 26, 12, 80, 97, 60, 110, 99, 66, 
+    26, 99, 66, 26, 12, 80, 97, 60 ]
+
 const todaySvg = document.querySelector("svg")
+
+//witdh bar = 24
+//gap between bars = 12
+//max height = 112
 
 data.forEach((d, i) => {
     //add a rectangleTag to todaySvg
     const rectTag = document.createElementNS("http://www.w3.org/2000/svg", "rect")
-    rectTag.setAttribute("x", "20")
-    rectTag.setAttribute("y", "20")
-    rectTag.setAttribute("width", "200")
-    rectTag.setAttribute("height", "40")
+    rectTag.setAttribute("x", i * 36)
+    rectTag.setAttribute("y", 112 - d)
+    rectTag.setAttribute("width", "24")
+    rectTag.setAttribute("height", d)
 
     todaySvg.append(rectTag)
 })
