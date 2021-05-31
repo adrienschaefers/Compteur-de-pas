@@ -1,14 +1,14 @@
-const todayData = [20, 30, 47, 60, 110, 99, 
-    66, 26, 12, 80, 97, 60, 110, 99, 66, 
-    26, 99, 66, 26, 12, 80, 97, 60 ]
 
 
 const todaySvg = d3.select("svg")
-const rectTags = d3.selectAll("rect")
+// const rectTags = d3.selectAll("rect")
 
-rectTags
+todaySvg //ci dessous les instructions qu'on donne à d3 pour créer le bar chart.
+    .selectAll("rect")
     .data(todayData)
-    .attr("width", (d, i) => { return d })
-    .attr("y", (d, i) => {return 50 * i})
-    .attr("x", 0)
-    .attr("height", 40)
+    .enter()
+    .append("rect")
+    .attr("y", (d,i) => {return 112 - d})
+    .attr("x", (d,i) => {return i * 36})
+    .attr("width", 24)
+    .attr("height", (d,i)=> { return d})
