@@ -21,7 +21,7 @@ body{
     color: var(--primary-blue);
     display: grid;
     grid-template-columns: 320px 1fr;
-    min-height: 200vh;
+    min-height: 100vh;
 }
 nav {
     background-color: var(--background-side);
@@ -59,3 +59,8 @@ circle {
     stroke-width:6;
 }
 
+text {
+    fill: var(--secondary-orange);
+    text-anchor: middle;
+    font-size: 14px;
+}
