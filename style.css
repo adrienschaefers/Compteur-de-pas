@@ -53,12 +53,6 @@ rect{
     fill:var(--primary-orange);
 }
 
-circle {
-    fill: none;
-    stroke: var(--primary-orange);
-    stroke-width:6;
-}
-
 text {
     fill: var(--secondary-orange);
     text-anchor: middle;
